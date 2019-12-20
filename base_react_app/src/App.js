@@ -14,10 +14,10 @@ function App() {
         }}
       >
         <div style={{ flex: 1 }}>
-          <MicroFrontend host="http://www.google.com.br" />
+          <MicroFrontend host="http://flutter.microfrontends.net" />
         </div>
         <div style={{ flex: 1 }}>
-          <MicroFrontend host="http://localhost:5001/" />
+          <MicroFrontend host="http://php.microfrontends.net" />
         </div>
       </div>
     </div>

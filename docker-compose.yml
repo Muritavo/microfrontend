@@ -1,0 +1,37 @@
+version: '3.7'
+services:
+    #Responsável por mapear os dominios paos serviços corretos
+    proxy_reverso:
+        build: ./.config
+        ports: 
+            - "80:80" #Mapeamos a porta 80 do Host para a porta 80 que é atribuida pelo nginx
+        networks:
+            - microfrontends #Incluimos dentro de uma rede exclusiva da infraestrutura
+        depends_on: 
+            - base
+            - flutter
+            - php
+            - react
+    #Frontend que agrupa todos os outros frontends
+    base:
+        build: ./base_react_app
+        networks: 
+            - microfrontends
+    #Aplicação flutter
+    flutter:
+        build: ./flutter_app
+        networks: 
+            - microfrontends
+    #Aplicação php
+    php:
+        build: ./php_app
+        networks:
+            - microfrontends
+    #+1 Aplicação react
+    react:
+        build: ./react_app
+        networks: 
+            - microfrontends
+
+networks:
+    microfrontends:
