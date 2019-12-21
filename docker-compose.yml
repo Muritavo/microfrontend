@@ -15,23 +15,27 @@ services:
     #Frontend que agrupa todos os outros frontends
     base:
         build: ./base_react_app
+        container_name: base_app
         networks: 
             - microfrontends
     #Aplicação flutter
-    # flutter:
-    #     build: ./flutter_app
-    #     networks: 
-    #         - microfrontends
-    # #Aplicação php
-    # php:
-    #     build: ./php_app
-    #     networks:
-    #         - microfrontends
-    # #+1 Aplicação react
-    # react:
-    #     build: ./react_app
-    #     networks: 
-    #         - microfrontends
+    flutter:
+        build: ./flutter_app
+        container_name: flutter_app
+        networks: 
+            - microfrontends
+    #Aplicação php
+    php:
+        build: ./php_app
+        container_name: php_app
+        networks:
+            - microfrontends
+    #+1 Aplicação react
+    react:
+        build: ./react_app
+        container_name: react_app
+        networks: 
+            - microfrontends
 
 networks:
     microfrontends:

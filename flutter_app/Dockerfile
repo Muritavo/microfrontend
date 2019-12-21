@@ -1,10 +1,9 @@
-FROM node:12.2.0-alpine as build
-WORKDIR /tmp
-COPY ./package.json /tmp/package.json
-RUN npm install
-RUN npm install react-script -g
-COPY . /tmp
-RUN npm run build
+FROM cirrusci/flutter:beta-web as build
+WORKDIR /build
+COPY ./ /build
+RUN sudo chown -R cirrus:cirrus /build
+RUN flutter config --enable-web
+RUN flutter build web
 
 FROM nginx
-COPY --from=build /tmp/build /usr/share/nginx/html
+COPY --from=build /build/build/web /usr/share/nginx/html

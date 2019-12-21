@@ -1,3 +1,8 @@
+iframe {
+  border: 0px;
+  background: linear-gradient(darkred, darkblue);
+}
+
 .App {
   text-align: center;
 }

@@ -11,6 +11,7 @@
 <body>
     <h1>Uma página em PHP que funciona dentro dessa mesma aplicação</h1>
     <?php echo (random_int(0, 1000)); ?>
+    <button onclick="window.location.reload()">Change number with a page reload</button>
 </body>
 
 </html>
