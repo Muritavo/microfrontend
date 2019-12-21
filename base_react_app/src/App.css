@@ -5,7 +5,10 @@ body,
   height: 100%;
   width: 100%;
 }
-
+iframe {
+  border: 0px;
+  background: linear-gradient(darkred, darkblue);
+}
 .App {
   text-align: center;
 }
