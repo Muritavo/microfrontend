@@ -16,7 +16,7 @@ function App() {
         <div style={{ flex: 1 }}>
           <MicroFrontend host="http://flutter.microfrontends.net" />
         </div>
-        <div style={{ flex: 1, flexDirection: "column" }}>
+        <div style={{ flex: 1, flexDirection: "column", display: "flex" }}>
           <div style={{ flex: 1 }}>
             <MicroFrontend host="http://php.microfrontends.net" />
           </div>
