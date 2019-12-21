@@ -3,7 +3,7 @@ Esta aplicacao demonstra uma imlementacao basica do conceito de microfrontends
 Durante os proximos dias e o objetivo fazer com que a aplicacao atenda os seguintes objetivos:
 
 - ~~Implementar multiplas tecnologias sobre uma mesma interface~~
-- Criar uma forma dinamica de (re)implantar os componentes da interface de maneira dinamica utilizando docker
+- Criar uma forma dinamica de (re)implantar os componentes da interface utilizando docker
 - Compatilhar mesmos padroes de interface entre as diferentes tecnologias
 - (Principal) Definir uma arquitetura de comunicacao entre as aplicacoes independente de tecnologias (backend / fronted)
 - (Ideal) Fazer com que a aplicacao possa ser executada em diversas abas sem perder o contexto
