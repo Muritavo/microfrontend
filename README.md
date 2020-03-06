@@ -1,3 +1,5 @@
+## Pelos meus testes esta é uma implementação muito simplória de microfrontends e não é a mais otimizada pois os microfrontends não compartilham recursos nem executam nenhum tipo de otimização. A branch (ainda não existente) vai possuir um exemplo melhor desse tipo de implementação
+
 Esta aplicacao demonstra uma imlementacao basica do conceito de microfrontends
 
 Durante os proximos dias e o objetivo fazer com que a aplicacao atenda os seguintes objetivos:
